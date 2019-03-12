@@ -6,6 +6,7 @@ function Queue() {
 	this.back = back	//读取队尾元素
 	this.toString = toString	//显示队列内所有元素
 	this.empty = empty	//判断队列是否为空
+	this.count = count	//返回队列里元素数量
 }
 
 function enqueue(element) {
@@ -34,6 +35,10 @@ function toString() {
 
 function empty() {
 	return this.dataStore.length == 0 ? true : false
+}
+
+function count() {
+	return this.dataStore.length
 }
 
 module.exports = Queue
